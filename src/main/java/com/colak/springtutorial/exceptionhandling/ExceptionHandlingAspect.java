@@ -5,6 +5,7 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
+// This is an aspect that uses package name as pointcut
 @Aspect
 @Component
 @Slf4j
