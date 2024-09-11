@@ -11,11 +11,12 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class ExceptionHandlingAspect {
 
+    // throwing and method parameters must have the same name
     @AfterThrowing(
-            pointcut = "execution(* com.colak.springtutorial.controller.*.*(..))",
-            throwing = "ex"
+            pointcut = "execution(* com.colak.springtutorial.service.*.*(..))",
+            throwing = "exception"
     )
     public void handleException(Exception exception) {
-        log.error("An exception occurred: ", exception);
+        log.error("An exception caught in ExceptionHandlingAspect: ", exception);
     }
 }
