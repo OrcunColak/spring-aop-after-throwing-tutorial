@@ -16,7 +16,7 @@ public class ExceptionHandlingAspect2 {
     public void handleException() {
     }
 
-    // throwing and method parameters must have the same name
+    // throwing attribute value and method parameter must have the same name
     @AfterThrowing(pointcut = "handleException()", throwing = "exception")
     public void afterThrowing(Exception exception) {
         log.error("An exception caught in ExceptionHandlingAspect2: ", exception);
